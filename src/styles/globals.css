@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./themes.css";
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
+  .center-col {
+    @apply flex flex-col items-center justify-center;
+  }
+  .max-w-screen-desktop {
+    max-width: 1440px;
+  }
+}
