@@ -63,7 +63,7 @@ export const FormAuth: React.FC = () => {
           >
             Esqueceu a senha?
           </a>
-          <ButtonForm />
+          <ButtonForm>Entrar</ButtonForm>
         </form>
       </FormProvider>
     </div>

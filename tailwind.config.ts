@@ -18,13 +18,6 @@ const config = {
       },
     },
     extend: {
-      screens: {
-        sm: { min: "340px", max: "467px" }, // Ajuste o máximo para 767px
-        md: { max: "1023px" }, // Ajuste o máximo para 1023px
-        lg: { min: "1024px", max: "1279px" }, // Ajuste o máximo para 1279px
-        xl: { min: "1280px", max: "1439px" }, // Ajuste o máximo para 1439px
-        xl2: { min: "1440px", max: "1599px" }, // Sem valor máximo, aplica para tamanhos maiores
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -79,9 +72,51 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screens: {
+        sm: { min: "310px", max: "467px" },
+        md: { min: "468px", max: "1023px" },
+        lg: { min: "1024px", max: "1279px" },
+        xl: { min: "1280px", max: "1439px" },
+        xl2: { min: "1440px", max: "1599px" },
+      },
+      gridTemplateAreas: {
+        "mainform-layout": [
+          "impressoes impressoes alcance curtidas",
+          "salvos compartilhamento compartilhamento comentarios",
+        ],
+        "mainform-layoutmobile": [
+          "impressoes impressoes",
+          "alcance alcance",
+          "curtidas curtidas",
+          "salvos salvos",
+          "compartilhamento compartilhamento",
+          "comentarios comentarios",
+        ],
+        "storiesform-layout": [
+          "stories-length stories-length alcance impressoes",
+          "replies taps-back compartilhamento sticker-touches",
+        ],
+      },
+      gridArea: {
+        impressoes: "impressoes",
+        alcance: "alcance",
+        curtidas: "curtidas",
+        compartilhamento: "compartilhamento",
+        salvos: "salvos",
+        comentarios: "comentarios",
+        taps_back: "taps-back",
+        sticker_touches: "sticker-touches",
+        replies: "replies",
+        stories_length: "stories-length",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@savvywombat/tailwindcss-grid-areas"),
+  ],
 } satisfies Config;
 
 export default config;
+
+// impressoes(número), alcance( número), curtidas(número), comentarios( número), salvos(número), compartilhamento (número)

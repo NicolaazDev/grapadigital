@@ -9,12 +9,12 @@ const jost = Jost({
 
 export default function LoginPage() {
   return (
-    <div className="flex items-center justify-between h-screen lg:justify-center">
-      <div className="min-h-screen w-full h-full relative lg:hidden">
+    <div className="flex items-center justify-between h-screen lg:justify-center md:justify-center sm:justify-center">
+      <div className="min-h-screen w-full h-full relative lg:hidden md:hidden sm:hidden">
         <img
           src="/assets/images/backgroundAuth.png"
           alt="login"
-          className="w-full h-full object-cover z-[-1] absolute"
+          className="w-full h-full object-cover z-[-1] absolute sm:w-[100px]"
         />
         <div className="w-full h-full flex px-10 pb-14 justify-center items-end bg-gradient-to-t from-[#000000]  via-#000000-400 to-[#ffffff00] opacity-100 z-20">
           <div className="flex items-start justify-center w-full flex-col">
@@ -31,8 +31,8 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center w-[30%] max-w-[550px] min-w-[540px] h-full px-7 bg-[#ffffff] lg:w-[100%] lg:min-w-fit lg:max-w-[300px]">
-        <div className="flex flex-col items-center justify-center gap-4 w-full ">
+      <div className="flex items-center justify-center w-[30%] max-w-[550px] min-w-[540px] sm:min-w-[100%] h-full px-7 bg-[#ffffff] lg:w-[100%] lg:min-w-fit lg:max-w-[300px] md:w-[100%] md:min-w-fit md:max-w-[300px]">
+        <div className="flex flex-col items-center justify-center gap-4 w-full  sm:!w-[100vw]">
           <img src="/assets/images/logo.svg" alt="logo" className="w-[90%]" />
           <h1
             className={`text-[30px] font-[300] ${jost.className} text-[#131313]`}

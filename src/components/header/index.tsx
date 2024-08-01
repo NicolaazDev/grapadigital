@@ -79,7 +79,7 @@ export default function Header() {
           Campanha
         </a>
         <a
-          href="/contact"
+          href="/conteudo"
           className="mx-2 font-[300] transition-all border-solid border-[1px] border-transparent"
         >
           Conteudo

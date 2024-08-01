@@ -8,6 +8,7 @@ interface InputFieldProps {
   type: string;
   placeholder: string;
   validation?: RegisterOptions;
+  className?: string;
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
@@ -16,6 +17,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   type,
   placeholder,
   validation,
+  className,
 }) => {
   const {
     register,
@@ -23,7 +25,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   } = useFormContext();
 
   return (
-    <div>
+    <div className={className}>
       <label
         className="font-[500] text-[--app-gray-900] text-[16px]"
         htmlFor={name}
