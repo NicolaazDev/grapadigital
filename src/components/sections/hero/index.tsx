@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="overflow-hidden relative flex flex-col items-start h-screen max-w-screen-2xl w-full text-white md:items-center">
+    <section className="overflow-hidden relative flex flex-col items-start h-screen max-w-screen-2xl w-full text-white md:items-center sm:min-h-[800px] ">
       <Header />
       <div className="flex justify-between items-center h-screen sm:items-start sm:pt-[105px] w-full md:flex-col md:justify-start sm:justify-start md:pt-[105px] xl2:px-[40px]">
         <NavIndicator className="left-0 md:hidden sm:hidden" />
@@ -44,7 +44,7 @@ export function Hero() {
         <img
           src="/assets/images/imageHero.jpg"
           alt="Hero Image"
-          className="w-[600px] h-[600px] object-cover rounded-full lg:w-[400px] lg:h-[400px] xl2:w-[600px] xl2:h-[600px] md:absolute md:bottom-[-40%] md:z-[0] md:w-[700px] md:h-[700px] sm:absolute sm:bottom-[-40%] sm:z-[0] sm:w-[700px] sm:h-[700px]"
+          className="w-[70vh] h-[70vh] object-cover rounded-full !max-h-[500px] lg:w-[400px] lg:h-[400px] xl2:w-[600px] xl2:h-[600px] md:absolute md:bottom-[-40%] md:z-[0] md:w-[700px] md:h-[700px] sm:absolute sm:bottom-[-20%] sm:z-[0] sm:w-[400px] sm:h-[400px]"
         />
       </div>
       <div className="fixed inset-0 min-w-[100vw]  h-full overflow-hidden z-[-1] bg-pattern [&>svg]:opacity-70">

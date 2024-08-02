@@ -78,6 +78,7 @@ const config = {
         lg: { min: "1024px", max: "1279px" },
         xl: { min: "1280px", max: "1439px" },
         xl2: { min: "1440px", max: "1599px" },
+        laptop: { min: "1600px", max: "1920px" },
       },
       gridTemplateAreas: {
         "mainform-layout": [

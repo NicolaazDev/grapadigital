@@ -59,7 +59,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="center-col w-full absolute !justify-between h-[100px] top-[10px] md:top-0 left-0 px-[40px]">
+    <header className="center-col w-full absolute !justify-between h-[10vh] top-[10px] md:top-0 left-0 px-[40px]">
       <img
         src="/assets/images/logo.svg"
         alt="logo"
