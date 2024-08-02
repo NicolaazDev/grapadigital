@@ -63,9 +63,9 @@ export default function Header() {
       <img
         src="/assets/images/logo.svg"
         alt="logo"
-        className="h-[100%] md:hidden mt-5"
+        className="h-[100%] md:hidden sm:hidden mt-5"
       />
-      <nav className="center md:hidden mt-3 h-full text-[--app-gray-800] hover:[&>a]:border-b-[--app-gray-500]">
+      <nav className="center md:hidden sm:hidden mt-3 h-full text-[--app-gray-800] hover:[&>a]:border-b-[--app-gray-500]">
         <a
           href="/"
           className="mx-2 font-[300] transition-all border-solid border-[1px] border-transparent"
@@ -126,7 +126,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <nav className="md:flex flex-col z-[9999999999] h-screen hidden w-full fixed !justify-center top-[0px] left-0">
+      <nav className="md:flex sm:flex flex-col z-[9999999999] h-screen hidden w-full fixed !justify-center top-[0px] left-0">
         <button
           className="block text-[#ffffff] top-[25px] left-[25px] absolute z-22"
           onClick={toggleMenu}

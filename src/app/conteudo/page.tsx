@@ -1,7 +1,11 @@
+"use client";
+
 import { Grid } from "@/components/grid";
 import GridItem from "@/components/gridItem";
+import Header from "@/components/header";
 import { ModalUpload } from "@/components/modalUpload";
 import { Jost } from "next/font/google";
+import { useState } from "react";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -24,6 +28,8 @@ const mockedGridItems = Array.from({ length: 10 }, (_, i) => ({
 }));
 
 const ConteudoPage = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="center-col py-[110px] px-10 relative overflow-x-hidden">
       <div className="background w-[100vw] h-[100vh] mix-blend-luminosity flex [&>svg]:scale-[1.5] sm:[&>svg]:scale-[1.1] sm:top-[-80px] z-[-1] items-start !justify-between absolute top-0 left-0">
@@ -85,14 +91,11 @@ const ConteudoPage = () => {
         </svg>
       </div>
 
-      <div className={`${jost.className} center-col !items-start`}>
-        <span className="font-extrabold text-[86px] md:text-[76px] sm:text-[46px] sm:text-center">
-          Influênciadores
-        </span>
-        <span className="font-extralight text-[27px] leading-[33px] max-w-[53%] md:max-w-[80%] sm:max-w-[95%] sm:text-center">
-          Gerencie e descubra conteúdos de influenciadores com a GrapaDigital.
-          Utilize nossa pesquisa avançada e filtros personalizados para
-          encontrar e organizar vídeos, TikToks, Reels e muito mais.
+      <Header />
+
+      <div className={`${jost.className} center-col !items-start w-full`}>
+        <span className="font-extrabold text-[86px] md:text-[76px]  sm:text-[46px] sm:text-center">
+          Conteudo
         </span>
       </div>
       <div className="center w-full mt-14 ">
@@ -108,14 +111,17 @@ const ConteudoPage = () => {
             </button>
           </div>
 
-          <button className="bg-[#36A9E1] p-2 rounded-[8px] min-w-[100px] h-[55px] center px-8 text-white md:w-[100%]  sm:w-[100%]">
+          <button
+            onClick={() => setOpen(true)}
+            className="bg-[#36A9E1] p-2 rounded-[8px] min-w-[100px] h-[55px] center px-8 text-white md:w-[100%]  sm:w-[100%]"
+          >
             <IoGridOutline />
           </button>
           <button className="bg-[#36A9E1] p-2 rounded-[8px] min-w-[100px] h-[55px] center px-8 text-white sm:w-[100%]  md:w-[100%]">
             <BsCalendar2Date />
           </button>
 
-          <ModalUpload />
+          <ModalUpload open={open} setOpen={setOpen} />
         </div>
       </div>
       <p className="text-[--app-gray-900]  font-[500] text-[18px] w-full text-start mt-7">
@@ -129,6 +135,9 @@ const ConteudoPage = () => {
             date={item.date}
             likes={item.likes}
             comments={item.comments}
+            onClick={() => {
+              setOpen(true);
+            }}
           />
         ))}
       </Grid>

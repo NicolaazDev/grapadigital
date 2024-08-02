@@ -9,15 +9,15 @@ export function Hero() {
   return (
     <section className="overflow-hidden relative flex flex-col items-start h-screen max-w-screen-2xl w-full text-white md:items-center">
       <Header />
-      <div className="flex justify-between items-center h-screen w-full md:flex-col md:justify-start md:pt-[105px] xl2:px-[40px]">
-        <NavIndicator className="left-0 md:hidden" />
+      <div className="flex justify-between items-center h-screen sm:items-start sm:pt-[105px] w-full md:flex-col md:justify-start sm:justify-start md:pt-[105px] xl2:px-[40px]">
+        <NavIndicator className="left-0 md:hidden sm:hidden" />
 
-        <div className="flex flex-col items-start ml-4 md:items-center md:justify-start ">
+        <div className="flex flex-col items-start ml-4 md:items-center md:justify-start sm:justify-start">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[56px] font-black leading-[61px] text-[--app-gray-900] lg:text-[36px] lg:leading-[46px] xl2:text-[44px] xl2:leading-[54px] md:text-center md:text-[46px] md:leading-[48px]"
+            className="text-[56px] font-black leading-[61px] text-[--app-gray-900] lg:text-[36px] lg:leading-[46px] xl2:text-[44px] xl2:leading-[54px] md:text-center md:text-[46px] md:leading-[48px]  sm:text-center sm:text-[46px] sm:leading-[48px]"
           >
             AGÊNCIA DE MARKETING <br /> & INFLUÊNCIA
           </motion.h1>
@@ -25,7 +25,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[34px] mt-6 font-extralight leading-[41px] max-w-[90%] text-[--app-gray-500] md:text-[24px] md:leading-[28px] lg:text-[24px] lg:leading-[28px] xl2:text-[30px] xl2:leading-[32px] md:text-center"
+            className="text-[34px] mt-6 font-extralight leading-[41px] max-w-[90%] text-[--app-gray-500] md:text-[24px] sm:text-[24px] md:leading-[28px] sm:leading-[28px] lg:text-[24px] lg:leading-[28px] xl2:text-[30px] xl2:leading-[32px] md:text-center sm:text-center"
           >
             A Grapa Digital conecta influenciadores famosos e marcas através de
             estratégias de marketing inovadoras e eficazes. Junte-se a nós e
@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-[50px] px-4 py-2 bg-[#ffff] border border-solid border-[#38AA43] text-[#38AA43] rounded-[8px] h-[55px] w-[50%] lg:w-[80%] md:z-40 sm:w-[90%]"
+            className="mt-[50px] px-4 py-2 bg-[#ffff] border border-solid border-[#38AA43] text-[#38AA43] rounded-[8px] h-[55px] w-[50%] lg:w-[80%] md:z-40 sm:z-40 sm:w-[90%]"
           >
             Conheça Mais
           </motion.button>
@@ -44,7 +44,7 @@ export function Hero() {
         <img
           src="/assets/images/imageHero.jpg"
           alt="Hero Image"
-          className="w-[600px] h-[600px] object-cover rounded-full lg:w-[400px] lg:h-[400px] xl2:w-[600px] xl2:h-[600px] md:absolute md:bottom-[-40%] md:z-[0] md:w-[700px] md:h-[700px]"
+          className="w-[600px] h-[600px] object-cover rounded-full lg:w-[400px] lg:h-[400px] xl2:w-[600px] xl2:h-[600px] md:absolute md:bottom-[-40%] md:z-[0] md:w-[700px] md:h-[700px] sm:absolute sm:bottom-[-40%] sm:z-[0] sm:w-[700px] sm:h-[700px]"
         />
       </div>
       <div className="fixed inset-0 min-w-[100vw]  h-full overflow-hidden z-[-1] bg-pattern [&>svg]:opacity-70">

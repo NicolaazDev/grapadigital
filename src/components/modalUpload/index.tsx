@@ -116,8 +116,8 @@ const modalFormSchema = z
 
 const options = ["Feed", "Stories", "Videos Tiktok", "Videos YouTube"];
 
-export const ModalUpload = () => {
-  const [open, setOpen] = useState(false);
+export const ModalUpload = ({ open, setOpen }: any) => {
+  // const [open, setOpen] = useState(false);
 
   const methods = useForm<FormValues>({
     resolver: zodResolver(modalFormSchema),
@@ -149,7 +149,7 @@ export const ModalUpload = () => {
       <DialogTrigger className="bg-[#36A9E1] p-2 min-w-[340px] h-[55px] center rounded-[8px] text-white md:w-[100%] sm:w-full">
         + Upload
       </DialogTrigger>
-      <DialogContent className="max-w-fit min-w-[300px] w-full rounded-[8px] p-7 overflow-y-scroll max-h-screen ">
+      <DialogContent className="max-w-fit min-w-[300px] w-full rounded-[8px] p-7 max-h-screen ">
         <FormProvider {...methods}>
           <form
             className="rounded-md shadow-sm w-[100%]"

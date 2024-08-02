@@ -1,21 +1,30 @@
-import { FC } from "react";
+"use client";
 
 import { CalendarFold, Heart, MessageCircle } from "lucide-react";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 
 interface GridItemProps {
   imageUrl: string;
   date: string;
   likes: number;
   comments: number;
+  onClick?: () => void;
 }
 
-import { Poppins } from "next/font/google";
-
-const poppins = Poppins({ weight: "300", subsets: ["latin"] });
-
-const GridItem: FC<GridItemProps> = ({ imageUrl, date, likes, comments }) => {
+const GridItem = ({
+  imageUrl,
+  date,
+  likes,
+  comments,
+  onClick,
+}: GridItemProps) => {
   return (
-    <div className="h-[310px] w-full relative bg-#5c5252 rounded-[8px] shadow-md">
+    <div
+      className="h-[310px] w-full relative bg-#5c5252 rounded-[8px] shadow-md cursor-pointer"
+      onClick={onClick}
+    >
       <img
         src={imageUrl}
         alt="recipe image"
