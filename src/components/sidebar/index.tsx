@@ -40,7 +40,7 @@ const Sidebar = () => {
   return (
     <div
       className={`bg-[#121518] sidebar duration-200 w-full  max-w-[320px] transition-all relative h-screen center-col ${
-        isOpen ? "min-w-[320px] fixed" : "w-[100px] close"
+        isOpen ? "min-w-[320px] fixed" : "min-w-[100px] close"
       } py-4 px-2`}
     >
       <img
