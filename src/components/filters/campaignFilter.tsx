@@ -30,7 +30,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Redes sociais:</h3>
-          <ToggleGroup type="multiple" className="flex-wrap">
+          <ToggleGroup type="multiple" className="flex-wrap !justify-start">
             <ToggleGroupItem value="instagram">
               <FaInstagram />
               <span>Instagram</span>
@@ -55,7 +55,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Status:</h3>
-          <ToggleGroup type="multiple" className="flex-wrap">
+          <ToggleGroup type="multiple" className="flex-wrap !justify-start">
             <ToggleGroupItem value="config">
               <span>Configuração</span>
             </ToggleGroupItem>
@@ -75,7 +75,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Soluçao:</h3>
-          <ToggleGroup type="multiple" className="flex-wrap">
+          <ToggleGroup type="multiple" className="flex-wrap !justify-start">
             <ToggleGroupItem value="influenciadores">
               <span>Influenciadores</span>
             </ToggleGroupItem>
@@ -95,7 +95,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Extras:</h3>
-          <ToggleGroup type="multiple" className="flex-wrap">
+          <ToggleGroup type="multiple" className="flex-wrap !justify-start">
             <ToggleGroupItem value="excluidos">
               <span>Excluidos</span>
             </ToggleGroupItem>
