@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="grid grid-cols-[auto_1fr] h-screen grid-rows-[100vh] overflow-hidden">
+        <div className="grid grid-cols-[auto_1fr] max-h-screen h-full grid-rows-[100vh] overflow-hidden">
           <Sidebar />
           <div className="w-full h-screen">{children}</div>
         </div>

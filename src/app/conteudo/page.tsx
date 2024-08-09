@@ -13,7 +13,7 @@ import { SearchIcon, LayoutGridIcon, CalendarIcon } from "lucide-react";
 import { useState } from "react";
 
 const mockedGridItems = Array.from({ length: 20 }, (_, i) => ({
-  imageUrl: `https://picsum.photos/id/${i + 1}/300/300`,
+  imageUrl: `https://mocks.elevenplusexams.co.uk/assets/uncompiled/online_mocks1.jpg?t=3654667474`,
   date: new Date(2022, 0, i + 1).toLocaleDateString("pt-BR", {
     day: "2-digit",
     month: "2-digit",
@@ -36,10 +36,10 @@ const ConteudoPage = () => {
           placeholder="Busque por @, # ou palavra-chave"
           onClick={(value) => console.log(value)}
         />
-        <div className="center space-x-2 h-[60px] sm:!ml-0 sm:mt-1 sm:h-auto w-full sm:grid sm:grid-cols-2 sm:grid-rows sm:gap-1">
+        <div className="center space-x-2 h-[60px] sm:!ml-0 sm:mt-1 sm:h-auto w-full sm:grid sm:grid-cols-2 sm:grid-rows-[50px_50px] sm:gap-1">
           <Button
             variant={"outline"}
-            className="center sm:w-full sm:!ml-0 h-full w-[60px]"
+            className="center sm:w-full sm:!ml-0 h-full  w-[60px]"
           >
             <LayoutGridIcon strokeWidth={1} />
           </Button>
