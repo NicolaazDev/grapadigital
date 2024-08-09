@@ -40,7 +40,7 @@ const Sidebar = () => {
   return (
     <div
       className={`bg-[#121518] sidebar duration-200 w-full  max-w-[320px] transition-all relative h-screen center-col ${
-        isOpen ? "min-w-[320px] fixed" : "min-w-[100px] close"
+        isOpen ? "min-w-[320px] sm:!min-w-[100vw] fixed" : "min-w-[100px] close"
       } py-4 px-2`}
     >
       <img
@@ -50,17 +50,17 @@ const Sidebar = () => {
             : "https://res.cloudinary.com/dmceve2cp/image/upload/v1723163610/imagem_2024-08-08_213329234_s3whv8.png"
         }
         alt="logo"
-        className={`${
-          isOpen ? "w-[200px]" : "w-[50px]"
-        } absolute top-8 md:hidden sm:hidden mt-5`}
+        className={`${isOpen ? "w-[200px]" : "w-[50px]"} absolute top-8 mt-5`}
       />
       <div
         onClick={toggleSidebar}
-        className="absolute cursor-pointer z-20 top-[60px] -right-4 h-8 w-8 bg-[#121518] center rounded-[8px] border-[1px] border-solid border-accent text-accent"
+        className={`absolute cursor-pointer z-20 ${
+          isOpen ? "sm:!right-4" : ""
+        } top-[60px] -right-4 h-8 w-8 bg-[#121518] center rounded-[8px] border-[1px] border-solid border-accent text-accent`}
       >
         <ChevronLeftIcon
           size={18}
-          className={`transition-all ${isOpen ? "rotate-180" : ""}`}
+          className={`transition-all ${!isOpen ? "rotate-180" : ""}`}
         />
       </div>
       <div className="center-col max-w-[250px] w-full text-[#cce4ff] space-y-2">
