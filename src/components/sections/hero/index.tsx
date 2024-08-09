@@ -16,7 +16,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[56px] font-black leading-[61px] text-[--app-gray-900] lg:text-[36px] lg:leading-[46px] xl2:text-[44px] xl2:leading-[54px] md:text-center md:text-[46px] md:leading-[48px]  sm:text-center sm:text-[46px] sm:leading-[48px]"
+            className="text-[56px] font-black leading-[61px] text-[--app-gray-900] lg:text-[36px] lg:leading-[46px] xl2:text-[44px] xl2:leading-[54px] md:text-center md:text-[46px] md:leading-[48px]  sm:text-center sm:text-[30px] sm:leading-[30px]"
           >
             AGÊNCIA DE MARKETING <br /> & INFLUÊNCIA
           </motion.h1>
@@ -24,7 +24,7 @@ export function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-[34px] mt-6 font-extralight leading-[41px] max-w-[90%] text-[--app-gray-500] md:text-[24px] sm:text-[24px] md:leading-[28px] sm:leading-[28px] lg:text-[24px] lg:leading-[28px] xl2:text-[30px] xl2:leading-[32px] md:text-center sm:text-center"
+            className="text-[34px] mt-6 font-extralight leading-[41px] max-w-[90%] text-[--app-gray-500] md:text-[24px] sm:text-[20px] md:leading-[28px] sm:leading-[21px] lg:text-[24px] lg:leading-[28px] xl2:text-[30px] xl2:leading-[32px] md:text-center sm:text-center"
           >
             A Grapa Digital conecta influenciadores famosos e marcas através de
             estratégias de marketing inovadoras e eficazes. Junte-se a nós e
