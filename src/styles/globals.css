@@ -97,6 +97,10 @@
     @apply space-x-3 border border-solid border-gray-300;
   }
 
+  .filter-container .filter-group {
+    @apply flex-wrap;
+  }
+
   .filter-container .filter-group h3 {
     @apply text-[18px] font-[100] mb-3;
   }
