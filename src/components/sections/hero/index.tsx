@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section className="overflow-hidden relative flex flex-col items-start h-screen max-w-screen-2xl w-full text-white md:items-center sm:min-h-[800px] ">
-      <Header />
       <div className="flex justify-between items-center h-screen sm:items-start sm:pt-[105px] w-full md:flex-col md:justify-start sm:justify-start md:pt-[105px] xl2:px-[40px]">
         <NavIndicator className="left-0 md:hidden sm:hidden" />
 

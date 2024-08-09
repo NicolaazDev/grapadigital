@@ -110,6 +110,13 @@ const config = {
         replies: "replies",
         stories_length: "stories-length",
       },
+      fontFamily: {
+        poppins: ["Poppins"],
+        poppins_thin: ["Poppins Thin"],
+        poppins_extralight: ["Poppins ExtraLight"],
+        poppins_light: ["Poppins Light"],
+        poppins_black: ["Poppins Black"],
+      },
     },
   },
   plugins: [

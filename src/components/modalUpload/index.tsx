@@ -16,6 +16,7 @@ import {
 
 import { z } from "zod";
 import { useEffect, useState } from "react";
+import { UploadIcon } from "lucide-react";
 
 interface FormValues {
   campanha: string;
@@ -116,7 +117,7 @@ const modalFormSchema = z
 
 const options = ["Feed", "Stories", "Videos Tiktok", "Videos YouTube"];
 
-export const ModalUpload = ({ open, setOpen }: any) => {
+export const ModalUpload = ({ open, setOpen, className }: any) => {
   // const [open, setOpen] = useState(false);
 
   const methods = useForm<FormValues>({
@@ -146,8 +147,10 @@ export const ModalUpload = ({ open, setOpen }: any) => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="bg-[#36A9E1] p-2 min-w-[340px] h-[55px] center rounded-[8px] text-white md:w-[100%] sm:w-full">
-        + Upload
+      <DialogTrigger
+        className={`bg-[#5f84ff] ${className} space-x-2 p-2 min-w-[340px] h-full center rounded-[8px] text-white md:w-[100%] sm:w-full`}
+      >
+        <span>Upload</span> <UploadIcon strokeWidth={1} />
       </DialogTrigger>
       <DialogContent className="max-w-fit min-w-[300px] w-full rounded-[8px] p-7 max-h-screen ">
         <FormProvider {...methods}>

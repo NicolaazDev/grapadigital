@@ -4,6 +4,51 @@
 
 @import "./themes.css";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../../public/assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Thin";
+  src: url("../../public/assets/fonts/Poppins/Poppins-Thin.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins ExtraLight";
+  src: url("../../public/assets/fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Light";
+  src: url("../../public/assets/fonts/Poppins/Poppins-Light.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins Black";
+  src: url("../../public/assets/fonts/Poppins/Poppins-Black.ttf");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Monte";
+  src: url("../../public/assets/fonts/monte.ttf");
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../../public/assets/fonts/jost.ttf");
+}
+
 @layer utilities {
   .center {
     @apply flex items-center justify-center;
@@ -13,6 +58,63 @@
   }
   .max-w-screen-desktop {
     max-width: 1440px;
+  }
+
+  .nav-button {
+    @apply font-[100] !text-[18px] border-b-0 px-4 py-2 rounded-[8px] font-poppins_thin tracking-wider h-[60px] w-full center !justify-start space-x-3;
+  }
+  .nav-button a {
+    @apply !font-[100];
+  }
+
+  .accordion {
+    @apply !center-col !h-auto;
+  }
+
+  .sidebar.close .submenu {
+    @apply center;
+  }
+
+  .sidebar.close .nav-button {
+    @apply !justify-center !w-[60px];
+  }
+
+  /* .active {
+    background-color: #85bcfa;
+    color: rgb(255, 255, 255);
+  }
+
+  .active:hover {
+    background-color: #85bcfa !important;
+    color: rgb(255, 255, 255) !important;
+  } */
+
+  .tags span {
+    @apply bg-gray-200 border border-solid border-gray-500 px-4 py-1 rounded-[8px] text-[14px] md:text-[11px];
+  }
+
+  .filter-container .filter-group button {
+    @apply space-x-3 border border-solid border-gray-300;
+  }
+
+  .filter-container .filter-group h3 {
+    @apply text-[18px] font-[100] mb-3;
+  }
+
+  .filter-container .filter-group button[data-state="on"] {
+    @apply bg-[#9558f7] text-accent;
+  }
+
+  .archived {
+    position: relative;
+    background-color: #f37e7e !important;
+    color: rgb(255, 255, 255) !important;
+    @apply center !pl-8;
+  }
+
+  .archived::after {
+    content: "";
+    @apply absolute left-3 w-[10px] h-[10px] bg-red-500 rounded-[8px];
   }
 }
 
@@ -98,4 +200,27 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9c9c9c;
+  transition: 0.4s ease;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
 }
