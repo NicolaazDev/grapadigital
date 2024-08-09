@@ -24,13 +24,13 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
 }) => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetContent className="filter-container pl-5 w-[40%] center-col !justify-start !items-start font-poppins_light">
+      <SheetContent className="filter-container pl-5 w-[40%] sm:w-[95%] center-col !justify-start !items-start font-poppins_light">
         <div className="w-full font-poppins border border-solid border-transparent border-b-gray-300">
           <h3 className="text-[28px]">Filtros</h3>
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Redes sociais:</h3>
-          <ToggleGroup type="multiple">
+          <ToggleGroup type="multiple" className="flex-wrap">
             <ToggleGroupItem value="instagram">
               <FaInstagram />
               <span>Instagram</span>
@@ -55,7 +55,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Status:</h3>
-          <ToggleGroup type="multiple">
+          <ToggleGroup type="multiple" className="flex-wrap">
             <ToggleGroupItem value="config">
               <span>Configuração</span>
             </ToggleGroupItem>
@@ -75,7 +75,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Soluçao:</h3>
-          <ToggleGroup type="multiple">
+          <ToggleGroup type="multiple" className="flex-wrap">
             <ToggleGroupItem value="influenciadores">
               <span>Influenciadores</span>
             </ToggleGroupItem>
@@ -95,7 +95,7 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
         </div>
         <div className="center-col filter-group !items-start">
           <h3>Extras:</h3>
-          <ToggleGroup type="multiple">
+          <ToggleGroup type="multiple" className="flex-wrap">
             <ToggleGroupItem value="excluidos">
               <span>Excluidos</span>
             </ToggleGroupItem>
