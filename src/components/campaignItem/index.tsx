@@ -7,7 +7,7 @@ const CampaignItem = ({ onClick }: { onClick?: () => void }) => {
   return (
     <li
       onClick={onClick}
-      className="border-[1px] relative font-poppins_light shadow-lg py-1 px-3 h-[150px] md:h-[120px] sm:pb-3 sm:h-auto w-full center sm:center-col sm:!items-start !justify-start border-gray-300 rounded-[8px]"
+      className="border-[1px] cursor-pointer relative font-poppins_light shadow-lg py-1 px-3 h-[150px] md:h-[120px] sm:pb-3 sm:h-auto w-full center sm:center-col sm:!items-start !justify-start border-gray-300 rounded-[8px]"
     >
       <Image
         src="https://w3collective.com/wp-content/uploads/2021/03/skeleton-screen-animation.gif"

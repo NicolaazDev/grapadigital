@@ -9,6 +9,7 @@ interface InputButtonProps {
   icon?: React.ReactNode;
   textButton?: string;
   placeholder?: string;
+  value: string;
   onClick: (value: string) => void;
 }
 
@@ -17,6 +18,7 @@ const InputWithButton: React.FC<InputButtonProps> = ({
   icon,
   textButton,
   placeholder,
+  value,
   onClick,
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -32,7 +34,8 @@ const InputWithButton: React.FC<InputButtonProps> = ({
       <Input
         ref={inputRef}
         placeholder={placeholder}
-        className="focus-visible:ring-transparent h-full rounded-br-none rounded-tr-none"
+        value={value}
+        className="focus-visible:ring-transparent h-full border-r-0 rounded-br-none rounded-tr-none"
       />
       <Button
         variant={"outline"}

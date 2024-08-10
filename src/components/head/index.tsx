@@ -13,7 +13,7 @@ const PageHead: React.FC<PageHeadProps> = ({ title, subtitle }) => {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-[1.1rem] sm:text-[0.7rem] sm:hidden leading-[1.1rem] ml-2 translate-y-2">
+          <p className="text-[1.1rem] opacity-80 sm:text-[0.7rem] sm:hidden leading-[1.1rem] ml-2 translate-y-2">
             / {subtitle}
           </p>
         )}

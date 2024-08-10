@@ -6,11 +6,12 @@ import CampaignItem from "@/components/campaignItem";
 import PageHead from "@/components/head";
 import InputWithButton from "@/components/inputButton";
 import VerticalList from "@/components/verticalList";
-import FilterCampaign from "@/components/filters/campaignFilter";
+import FilterCampaign from "@/components/sheets/campaignFilter";
 
 import { SearchIcon, FilterIcon, DiamondPlusIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function MinhasCampanhas() {
   const handleSearch = (value: string) => {
@@ -18,9 +19,14 @@ export default function MinhasCampanhas() {
   };
 
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const handleOpenItem = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleClickCampaign = () => {
+    router.push("campanhas/12313213");
   };
 
   return (
@@ -28,8 +34,9 @@ export default function MinhasCampanhas() {
       <PageHead title="Campanhas" subtitle="Minhas Campanhas" />
       <div className="w-full center mt-5 !justify-end space-x-2 sm:space-y-2 sm:!space-x-0 min-h-[60px] sm:min-h-fit sm:center-col">
         <InputWithButton
+          value=""
           icon={<SearchIcon size={20} strokeWidth={1} />}
-          className="min-w-[550px] md:min-w-[300px] sm:min-w-[100px] !h-full sm:w-full"
+          className="min-w-[25%] md:min-w-[300px] sm:min-w-[100px] !h-full sm:w-full"
           placeholder="Nome da campanha ou #ID"
           onClick={handleSearch}
         />
@@ -48,7 +55,7 @@ export default function MinhasCampanhas() {
       </div>
       <VerticalList>
         {Array.from({ length: 10 }).map((_, i) => (
-          <CampaignItem key={i} />
+          <CampaignItem onClick={handleClickCampaign} key={i} />
         ))}
       </VerticalList>
       <FilterCampaign isOpen={isOpen} setIsOpen={handleOpenItem} />

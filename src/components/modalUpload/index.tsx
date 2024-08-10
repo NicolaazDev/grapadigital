@@ -148,7 +148,7 @@ export const ModalUpload = ({ open, setOpen, className }: any) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger
-        className={`bg-[#5f84ff] ${className} space-x-2 p-2 min-w-[340px] h-full center rounded-[8px] text-white md:w-[100%] sm:w-full`}
+        className={`bg-[#5f84ff] ${className} space-x-2 p-2 min-w-[200px] h-full center rounded-[8px] text-white md:w-[100%] sm:w-full`}
       >
         <span>Upload</span> <UploadIcon strokeWidth={1} />
       </DialogTrigger>

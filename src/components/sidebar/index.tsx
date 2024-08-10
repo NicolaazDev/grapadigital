@@ -20,8 +20,6 @@ import {
   ChevronLeftIcon,
 } from "lucide-react";
 
-import Link from "next/link";
-
 import { usePathname, useRouter } from "next/navigation";
 
 const Sidebar = () => {
@@ -36,6 +34,10 @@ const Sidebar = () => {
   const navigation = (path: string) => {
     router.push(path);
   };
+
+  if (pathname === "/login") {
+    return null;
+  }
 
   return (
     <div

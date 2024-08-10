@@ -93,6 +93,14 @@
     @apply bg-gray-200 border border-solid border-gray-500 px-4 py-1 rounded-[8px] text-[14px] md:text-[11px];
   }
 
+  .tags.tags-page {
+    @apply w-full !justify-start;
+  }
+
+  .tags.tags-page span {
+    @apply border-0 px-10 py-3;
+  }
+
   .filter-container .filter-group button {
     @apply space-x-3 border border-solid border-gray-300;
   }
@@ -113,7 +121,11 @@
     position: relative;
     background-color: #f37e7e !important;
     color: rgb(255, 255, 255) !important;
-    @apply center !pl-8;
+    @apply center !pl-8 !pr-5;
+  }
+
+  .tags .social {
+    @apply center space-x-1;
   }
 
   .archived::after {

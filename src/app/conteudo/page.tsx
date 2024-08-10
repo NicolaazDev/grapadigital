@@ -32,11 +32,11 @@ const ConteudoPage = () => {
       <div className="w-full center mt-6 !justify-end space-x-2 sm:mt-7 md:mt-4 h-[60px] md:h-auto sm:h-auto md:space-y-2 md:center-col sm:center-col">
         <InputWithButton
           icon={<SearchIcon size={20} strokeWidth={1} />}
-          className="min-w-[40%] md:w-full !h-full md:!h-[55px] sm:w-full sm:!h-[50px]"
+          className="min-w-[25%] md:w-full !h-full md:!h-[55px] sm:w-full sm:!h-[50px]"
           placeholder="Busque por @, # ou palavra-chave"
           onClick={(value) => console.log(value)}
         />
-        <div className="center space-x-2 h-[60px] sm:!ml-0 sm:mt-1 sm:h-auto w-full sm:grid sm:grid-cols-2 sm:grid-rows-[50px_50px] sm:gap-1">
+        <div className="center  space-x-2 h-[60px] sm:!ml-0 sm:mt-1 sm:h-auto sm:w-full sm:grid sm:grid-cols-2 sm:grid-rows-[50px_50px] sm:gap-1">
           <Button
             variant={"outline"}
             className="center sm:w-full sm:!ml-0 h-full  w-[60px]"
@@ -47,7 +47,7 @@ const ConteudoPage = () => {
             <CalendarIcon strokeWidth={1} />
           </Button>
           <ModalUpload
-            className="w-full sm:!ml-0 sm:!min-w-full sm:col-span-2"
+            className="w-[30%] sm:!ml-0 sm:!min-w-full sm:col-span-2"
             open={open}
             setOpen={setOpen}
           />
