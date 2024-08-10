@@ -31,6 +31,7 @@ const ConteudoPage = () => {
       <PageHead title="Conteúdo" />
       <div className="w-full center mt-6 !justify-end space-x-2 sm:mt-7 md:mt-4 h-[60px] md:h-auto sm:h-auto md:space-y-2 md:center-col sm:center-col">
         <InputWithButton
+          value=""
           icon={<SearchIcon size={20} strokeWidth={1} />}
           className="min-w-[25%] md:w-full !h-full md:!h-[55px] sm:w-full sm:!h-[50px]"
           placeholder="Busque por @, # ou palavra-chave"
