@@ -95,7 +95,7 @@ export default function CampanhaPage() {
         </div>
       </div>
       <Separator className="mt-3" />
-      <Tabs defaultValue="painel" className="w-full mt-5 h-full">
+      <Tabs defaultValue="painel" className="w-full mt-5 h-full tabs-camp">
         <TabsList className="sm:center-col h-auto">
           <TabsTrigger value="painel" className="w-full">
             Painel de controle

@@ -32,7 +32,7 @@ export default function MinhasCampanhas() {
   return (
     <div className="center-col w-full h-screen font-poppins_light sm:items-start py-5 pl-7 px-4">
       <PageHead title="Campanhas" subtitle="Minhas Campanhas" />
-      <div className="w-full center mt-5 !justify-end space-x-2 sm:space-y-2 sm:!space-x-0 min-h-[60px] sm:min-h-fit sm:center-col">
+      <div className="w-full center mt-5 !justify-start space-x-2 sm:space-y-2 sm:!space-x-0 min-h-[60px] sm:min-h-fit sm:center-col">
         <InputWithButton
           value=""
           icon={<SearchIcon size={20} strokeWidth={1} />}

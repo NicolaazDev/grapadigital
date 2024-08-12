@@ -29,7 +29,7 @@ const ConteudoPage = () => {
   return (
     <div className="center-col  font-poppins_light w-full max-h-screen py-5 pl-7 px-4 relative overflow-x-hidden">
       <PageHead title="Conteúdo" />
-      <div className="w-full center mt-6 !justify-end space-x-2 sm:mt-7 md:mt-4 h-[60px] md:h-auto sm:h-auto md:space-y-2 md:center-col sm:center-col">
+      <div className="w-full center mt-6 !justify-start space-x-2 sm:mt-7 md:mt-4 h-[60px] md:h-auto sm:h-auto md:space-y-2 md:center-col sm:center-col">
         <InputWithButton
           value=""
           icon={<SearchIcon size={20} strokeWidth={1} />}

@@ -99,7 +99,7 @@ const Sidebar = () => {
             <AccordionItem
               className={`nav-button accordion ${
                 pathname === "/campanhas" ? "active" : ""
-              } !items-start hover:bg-accent hover:text-accent-foreground`}
+              } !items-start hover:bg-transparent `}
               value="item-1"
             >
               <div className="center">

@@ -128,6 +128,14 @@
     @apply center space-x-1;
   }
 
+  .tabs-camp button[data-state="active"] {
+    @apply !border-[2px] border-solid border-b-[#9558f7];
+  }
+
+  .tabs-camp button:hover {
+    @apply border-[0px] !border-b-[2px] border-transparent border-solid border-b-[#959cfa];
+  }
+
   .archived::after {
     content: "";
     @apply absolute left-3 w-[10px] h-[10px] bg-red-500 rounded-[8px];

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
@@ -49,6 +49,19 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
     resolver: zodResolver(modalFormSchema),
   });
 
+  const [socialMediaValue, setSocialMediaValue] = useState<string[]>([]);
+  const [statusValue, setStatusValue] = useState<string[]>([]);
+  const [solutionValue, setSolutionValue] = useState<string[]>([]);
+  const [extraValue, setExtraValue] = useState<string[]>([]);
+
+  const clearFilters = () => {
+    setSocialMediaValue([]);
+    setStatusValue([]);
+    setSolutionValue([]);
+    setExtraValue([]);
+    methods.reset();
+  };
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <FormProvider {...methods}>
@@ -58,7 +71,12 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
           </div>
           <div className="center-col filter-group !items-start">
             <h3>Redes sociais:</h3>
-            <ToggleGroup type="multiple" className="flex-wrap !justify-start">
+            <ToggleGroup
+              value={socialMediaValue}
+              onValueChange={setSocialMediaValue}
+              type="multiple"
+              className="flex-wrap !justify-start"
+            >
               <ToggleGroupItem value="instagram">
                 <FaInstagram />
                 <span>Instagram</span>
@@ -83,7 +101,12 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
           </div>
           <div className="center-col filter-group !items-start">
             <h3>Status:</h3>
-            <ToggleGroup type="multiple" className="flex-wrap !justify-start">
+            <ToggleGroup
+              value={statusValue}
+              onValueChange={setStatusValue}
+              type="multiple"
+              className="flex-wrap !justify-start"
+            >
               <ToggleGroupItem value="config">
                 <span>Configuração</span>
               </ToggleGroupItem>
@@ -103,7 +126,12 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
           </div>
           <div className="center-col filter-group !items-start">
             <h3>Soluçao:</h3>
-            <ToggleGroup type="multiple" className="flex-wrap !justify-start">
+            <ToggleGroup
+              value={solutionValue}
+              onValueChange={setSolutionValue}
+              type="multiple"
+              className="flex-wrap !justify-start"
+            >
               <ToggleGroupItem value="influenciadores">
                 <span>Influenciadores</span>
               </ToggleGroupItem>
@@ -123,7 +151,12 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
           </div>
           <div className="center-col filter-group !items-start">
             <h3>Extras:</h3>
-            <ToggleGroup type="multiple" className="flex-wrap !justify-start">
+            <ToggleGroup
+              value={extraValue}
+              onValueChange={setExtraValue}
+              type="multiple"
+              className="flex-wrap !justify-start"
+            >
               <ToggleGroupItem value="excluidos">
                 <span>Excluidos</span>
               </ToggleGroupItem>
@@ -156,11 +189,20 @@ const FilterCampaign: React.FC<FilterCampaignProps> = ({
           <DatePicker label="Data:" name="data" classname="max-h-[45px]" />
 
           <div className="absolute bottom-5 space-x-3 h-[55px] center">
-            <Button variant={"outline"} className="h-full space-x-4">
+            <Button
+              variant={"outline"}
+              onClick={clearFilters}
+              className="h-full space-x-4"
+            >
               <FilterXIcon strokeWidth={1} />
               <span>Remover Filtros</span>
             </Button>
-            <Button className="h-full w-[120px] bg-[#9558f7]">Aplicar </Button>
+            <Button
+              onClick={() => setIsOpen(false)}
+              className="h-full w-[120px] bg-[#9558f7]"
+            >
+              Aplicar{" "}
+            </Button>
           </div>
         </SheetContent>
       </FormProvider>
